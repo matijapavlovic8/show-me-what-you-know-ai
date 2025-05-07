@@ -1,40 +1,144 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Uvod u AI i LLM-ove u praksi</title>
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="dist/theme/solarized.css">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Uvod u AI i LLM-ove u praksi</h2>
+        <p>Matija Pavlović</p>
+        <p>7. svibnja 2025.</p>
+      </section>
+      <section>
+        <h2>Plan radionice</h2>
+        <ul>
+          <li>Uvod u AI i LLM-ove</li>
+          <li>Kako radi neuronska mreža</li>
+          <li>Osnove obrade jezika (NLP)</li>
+          <li>Što je LLM i kako ga koristiti</li>
+          <li>Promptanje u praksi</li>
+          <li>LLM-ovi u svakodnevnom radu</li>
+          <li>Pitanja i odgovori</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Što je AI?</h2>
+        <ul>
+          <li>AI (umjetna inteligencija) podrazumijeva stvaranje sustava koji mogu obavljati zadatke koji zahtijevaju ljudsku inteligenciju.</li>
+          <li>Počeci AI-a datiraju iz 1950-ih godina.</li>
+          <li>Alan Turing postavlja temelj s pitanjem: "Mogu li strojevi misliti?"</li>
+          <li>AI se razvija kroz uspone i padove – "AI zime" zbog prevelikih očekivanja.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Prvi pristupi u AI</h2>
+        <ul>
+          <li><strong>Logički pristupi</strong> – korištenje formalnih pravila i logike za donošenje zaključaka (npr. prediktivni modeli temeljeni na logici). </li>
+          <li><strong>Bayesovski pristup</strong> – korištenje Bayesove teoreme za donošenje odluka u uvjetima nesigurnosti (npr. Bayesovski klasifikatori). </li>
+          <li><strong>Simbolička AI</strong> – zasnovana na manipulaciji simbolima i pravilima (npr. sistem za rješavanje problema temeljen na pravilima).</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Prvi pristupi u AI</h2>
+        <ul>
+          <li><strong>Pretraga prostora stanja</strong> – tehnike za pronalaženje rješenja putem pretrage (npr. algoritmi za pretragu poput A* ili minimax).</li>
+          <li><strong>Ekspertni sustavi</strong> – sustavi temeljeni na pravilima koji simuliraju odluke stručnjaka u određenom području (npr. MYCIN za medicinske dijagnoze).</li>
+        </ul>
+      </section>
+      <section>
+        <img src="img/img_4.png" style="max-width: 70%; height: auto;" alt="">
+      </section>
+      <section>
+        <img src="img/bayesian-belief-network-2.webp" style="max-width: 70%; height: auto;" alt="">
+      </section>
+      <section>
+        <img src="img/1_mVI8w1-tOSsN78kIhYK1YA.gif" alt="" style="max-width: 80%; height: auto;">
+      </section>
 
-		<title>reveal.js</title>
+      <section>
+        <h2>Kako smo došli do LLM-ova</h2>
+        <ul>
+          <li>AI → ML → DL → NLP → LLM</li>
+        </ul>
+      </section>
+    <section>
+      <h2>Kako mislimo da AI radi</h2>
+      <img src="img/img2.png" alt="Kako mislimo da AI radi" style="max-width: 80%; height: auto;">
+    </section>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <section>
+      <h2>Kako AI zapravo radi</h2>
+      <img src="img/img_2.png" alt="Kako AI zapravo radi" style="max-width: 80%; height: auto;">
+    </section>
+          <section>
+      <img src="img/test_anim.gif" alt="" style="max-width: 80%; height: auto;">
+    </section>
+      <section>
+        <h2>Kako radi neuronska mreža</h2>
+        <ul>
+          <li>Neuroni, slojevi, veze</li>
+          <li>Proces učenja – prilagodba težina</li>
+          <li>Vizualna intuicija, bez matematičke dubine</li>
+        </ul>
+      </section>
+      <section>
+        <h2>3. Obrada jezika i dolazak LLM-ova</h2>
+        <ul>
+          <li>Tokenizacija i vektori</li>
+          <li>Klasični NLP → duboko učenje</li>
+          <li>Transformer arhitektura</li>
+        </ul>
+      </section>
+      <section>
+        <h2>4. Što je LLM i kako ga koristiti</h2>
+        <ul>
+          <li>Predviđanje riječi u kontekstu</li>
+          <li>Demo primjene: sažeci, pitanja, kod</li>
+          <li>Snaga i ograničenja</li>
+        </ul>
+      </section>
+      <section>
+        <h2>5. Promptanje u praksi</h2>
+        <ul>
+          <li>Dobar prompt: jasnoća, uloga, primjeri</li>
+          <li>Loš vs. dobar prompt – pokazni primjer</li>
+          <li>Interakcija s publikom</li>
+        </ul>
+      </section>
+      <section>
+        <h2>6. LLM-ovi u svakodnevnom radu</h2>
+        <ul>
+          <li>Automatizacija zadataka</li>
+          <li>Korištenje alata: ChatGPT, Copilot, Notion AI</li>
+          <li>Odgovorno korištenje i ograničenja</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Pitanja i odgovori</h2>
+      </section>
+    </div>
+  </div>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
-
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
 </html>
