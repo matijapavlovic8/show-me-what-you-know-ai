@@ -37,10 +37,10 @@
         <ul>
           <li>AI (umjetna inteligencija) podrazumijeva stvaranje sustava koji mogu obavljati zadatke koji zahtijevaju ljudsku inteligenciju.</li>
           <li>Počeci AI-a datiraju iz 1950-ih godina.</li>
-          <li>Alan Turing postavlja temelj s pitanjem: "Mogu li strojevi misliti?"</li>
           <li>AI se razvija kroz uspone i padove – "AI zime" zbog prevelikih očekivanja.</li>
         </ul>
       </section>
+
       <section>
         <h2>Prvi pristupi u AI</h2>
         <ul>
@@ -62,66 +62,278 @@
       <section>
         <img src="img/bayesian-belief-network-2.webp" style="max-width: 70%; height: auto;" alt="">
       </section>
+      <section style="font-size: 0.8em;">
+        <h2>Primjer: Je li se dogodila krađa?</h2>
+        <ul>
+          <li>Čuli smo da <strong>David zove</strong> – to znači da je najvjerojatnije čuo alarm.</li>
+          <li>Želimo izračunati: <strong>Kolika je vjerojatnost da je došlo do krađe?</strong></li>
+          <li>Koristimo:
+            <ul>
+              <li>Vjerojatnost da David zove ako je alarm aktiviran (0.91), i ako nije (0.05).</li>
+              <li>Vjerojatnosti za aktivaciju alarma u različitim situacijama (npr. ako je bilo krađe i/ili potresa).</li>
+              <li>Kolika je početna vjerojatnost krađe (0.02) i potresa (0.001).</li>
+            </ul>
+          </li>
+          <li>Računamo sve moguće kombinacije koje mogu objasniti što se dogodilo – krađa, potres, ili oboje.</li>
+        </ul>
+      </section>
+
+
       <section>
         <img src="img/1_mVI8w1-tOSsN78kIhYK1YA.gif" alt="" style="max-width: 80%; height: auto;">
       </section>
 
       <section>
-        <h2>Kako smo došli do LLM-ova</h2>
+        <h2>Kako smo došli do LLM-ova?</h2>
         <ul>
           <li>AI → ML → DL → NLP → LLM</li>
         </ul>
       </section>
-    <section>
-      <h2>Kako mislimo da AI radi</h2>
-      <img src="img/img2.png" alt="Kako mislimo da AI radi" style="max-width: 80%; height: auto;">
-    </section>
+      <section>
+        <h2>Neuronska mreža</h2>
+        <ul>
+          <li>Model nadahnut načinom rada ljudskog mozga – sastoji se od slojeva povezanih "neurona".</li>
+          <li>Svaki neuron obrađuje ulazne podatke i prenosi signal dalje kroz mrežu.</li>
+          <li>Uči iz podataka prilagođavanjem težina veza kako bi smanjila pogrešku u izlazu.</li>
+        </ul>
+      </section>
+      <section>
+        <img src="img/img_5.png" alt="" style="max-width: 80%; height: auto;">
+      </section>
+      <section>
+        <img src="img/img_6.png" alt="" style="max-width: 80%; height: auto;">
+      </section>
+      <section>
+        <h2>Aktivacijske funkcije</h2>
+        <ul>
+          <li>Određuju kako neuron "aktivira" izlaz na temelju zbrojenog ulaza – unose nelinearnost u mrežu.</li>
+          <li>Omogućuju modelu da uči složene odnose, ne samo linearne.</li>
+          <li>Primjeri:
+            <ul>
+              <li><strong>ReLU (Rectified Linear Unit):</strong> vraća 0 ako je ulaz negativan, inače vraća ulaz.</li>
+              <li><strong>Sigmoid:</strong> vraća vrijednosti između 0 i 1 – dobar za binarnu klasifikaciju.</li>
+              <li><strong>Tanh:</strong> vraća vrijednosti između -1 i 1 – koristi se kod normaliziranih podataka.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <img src="img/img_7.png" alt="" style="max-width: 80%; height: auto;">
+      </section>
+      <section>
+        <img src="img/img_13.png" style="max-width: 80%; height: auto;" alt="">
+      </section>
+      <section>
+        <img src="img/img_14.png" style="max-width: 80%; height: auto;" alt="">
+      </section>
+      <section>
+        <img src="img/img_15.png" style="max-width: 80%; height: auto;" alt="">
+      </section>
+      <section>
+        <img src="img/img_16.png" style="max-width: 80%; height: auto;" alt="">
+      </section>
 
-    <section>
-      <h2>Kako AI zapravo radi</h2>
-      <img src="img/img_2.png" alt="Kako AI zapravo radi" style="max-width: 80%; height: auto;">
-    </section>
-          <section>
-      <img src="img/test_anim.gif" alt="" style="max-width: 80%; height: auto;">
-    </section>
       <section>
-        <h2>Kako radi neuronska mreža</h2>
+        <h2>Što znači učenje modela?</h2>
         <ul>
-          <li>Neuroni, slojevi, veze</li>
-          <li>Proces učenja – prilagodba težina</li>
-          <li>Vizualna intuicija, bez matematičke dubine</li>
+          <li>Učenje modela je proces u kojem model prilagođava svoje interne parametre na temelju podataka.</li>
+          <li>Cilj je da model prepozna obrasce i pravila u podacima kako bi mogao donositi točne zaključke na novim primjerima.</li>
+          <li>Učenje se temelji na smanjivanju pogreške između predviđanja modela i stvarnih vrijednosti (npr. pomoću algoritma poput gradijentnog spusta).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Funkcija pogreške</h2>
+        <ul>
+          <li>Mjeri koliko su predikcije modela udaljene od stvarnih vrijednosti.</li>
+          <li>Vodi učenje modela – cilj je minimizirati pogrešku tijekom treniranja.</li>
+          <li>Primjeri funkcija pogreške:
+            <ul>
+              <li><strong>MSE (Mean Squared Error):</strong> često se koristi kod regresije – kvadrira razlike između stvarne i predviđene vrijednosti.</li>
+              <li><strong>Cross-entropy:</strong> koristi se kod klasifikacije – mjeri razliku između dvije distribucije (stvarna vs. predviđena).</li>
+            </ul>
+          </li>
         </ul>
       </section>
       <section>
-        <h2>3. Obrada jezika i dolazak LLM-ova</h2>
+        <h2>Gradijentni spust</h2>
         <ul>
-          <li>Tokenizacija i vektori</li>
-          <li>Klasični NLP → duboko učenje</li>
-          <li>Transformer arhitektura</li>
+          <li>Algoritam koji minimizira funkciju pogreške prilagođavanjem težina modela.</li>
+          <li>Računa se gradijent (derivacija) pogreške u odnosu na težine – pokazuje smjer najvećeg rasta pogreške.</li>
+          <li>Model se pomiče u suprotnom smjeru gradijenta korak po korak (korak = stopa učenja).</li>
         </ul>
       </section>
       <section>
-        <h2>4. Što je LLM i kako ga koristiti</h2>
+        <img src="img/sgd.gif" alt="" style="max-width: 80%; height: auto;">
+      </section>
+      <section>
+        <img src="img/test_anim.gif" alt="" style="max-width: 80%; height: auto;">
+      </section>
+
+      <section>
+        <h2>Što je Overfitting?</h2>
         <ul>
-          <li>Predviđanje riječi u kontekstu</li>
-          <li>Demo primjene: sažeci, pitanja, kod</li>
-          <li>Snaga i ograničenja</li>
+          <li>Model <strong>predobro nauči trening podatke</strong> – uključujući i šum i pogreške.</li>
+          <li>Izgleda točno na treningu, ali <strong>loše generalizira</strong> na nove, neviđene podatke.</li>
+          <li>Rješenja: regularizacija, više podataka, jednostavniji model, rani prekid treniranja.</li>
         </ul>
       </section>
       <section>
-        <h2>5. Promptanje u praksi</h2>
+        <img src="img/img_11.png" alt="" style="max-width: 80%; height: auto;">
+      </section>
+      <section>
+        <img src="img/img_12.png" alt="" style="max-width: 80%; height: auto;">
+      </section>
+
+      <section>
+        <h2>Obrada prirodnog jezika (NLP)</h2>
         <ul>
-          <li>Dobar prompt: jasnoća, uloga, primjeri</li>
-          <li>Loš vs. dobar prompt – pokazni primjer</li>
-          <li>Interakcija s publikom</li>
+          <li>Područje umjetne inteligencije koje omogućuje računalima razumijevanje i obradu ljudskog jezika.</li>
+          <li>Primjene: prevođenje, pretraživanje, chatboti, analiza sentimenta, sažimanje teksta.</li>
+          <li>Koristi tehnike kao što su tokenizacija, analiza sintakse, semantika i strojno učenje.</li>
         </ul>
       </section>
       <section>
-        <h2>6. LLM-ovi u svakodnevnom radu</h2>
+        <h2>Ugrađivanja riječi (Word Embeddings)</h2>
+        <ul>
+          <li>Riječi se pretvaraju u vektore brojeva koji zadržavaju značenje i međusobne odnose.</li>
+          <li>Slične riječi imaju slične vektore – omogućuje semantičko pretraživanje i grupiranje.</li>
+          <li>Popularni modeli: <strong>Word2Vec</strong>, <strong>GloVe</strong>, <strong>FastText</strong>.</li>
+        </ul>
+      </section>
+
+      <section>
+        <img src="img/img_8.png" alt="" style="max-width: 80%; height: auto;">
+      </section>
+      <section>
+        <h2>Što je LLM</h2>
+        <ul>
+          <li><strong>LLM (Large Language Model)</strong> je vrsta umjetne inteligencije trenirana na velikim količinama tekstualnih podataka.</li>
+          <li>Koristi statističke obrasce za razumijevanje i generiranje jezika koji izgleda prirodno i smisleno.</li>
+          <li>Primjenjuje se u zadacima poput odgovaranja na pitanja, prevođenja, sažimanja teksta i generiranja sadržaja.</li>
+        </ul>
+      </section>
+      <section>
+        <img src="img/img_9.png" alt="" style="max-width: 40%; height: auto;">
+      </section>
+      <section>
+        <h2>Prompting velikih jezičnih modela</h2>
+        <ul>
+          <li>Promptanje oblikuje odgovore LLM-a (Large Language Model), što utječe na kvalitetu izlaza.</li>
+          <li>Jasni i precizni promptovi dovode do boljih, relevantnijih i korisnijih odgovora.</li>
+          <li>Loši promptovi mogu rezultirati zbunjujućim, nejasnim ili nerealnim odgovorima.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Kako učinkovito koristiti LLM?</h2>
+        <ul>
+          <li><strong>Upute za dobar prompt:</strong>
+            <ul>
+              <li>Budite konkretni i specifični.</li>
+              <li>Postavite jasan cilj i uputu za model.</li>
+              <li>Uključite kontekst, ako je relevantan.</li>
+              <li>Koristite primjere da biste modelu olakšali razumijevanje zadatka.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Primjer kvalitetnog prompta</h2>
+        <ul>
+          <li><strong>Prompt:</strong> "Napiši sažetak ključnih prednosti primjene umjetne inteligencije u zdravstvu, uključujući konkretne primjere." </li>
+          <li><strong>Zašto je dobar:</strong> Specifičan je (umjetna inteligencija u zdravstvu), s jasnim očekivanjima (sažetak prednosti) i uključuje dodatne smjernice (konkretni primjeri).</li>
+          <li><strong>Rezultat:</strong> Dobiveni odgovor bit će usmjeren, konkretan i informativan.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Primjer lošeg prompta</h2>
+        <ul>
+          <li><strong>Prompt:</strong> "Pomoć o AI." </li>
+          <li><strong>Zašto je loš:</strong> Previše općenit, ne sadrži dovoljno smjernica ili specifičnosti.</li>
+          <li><strong>Rezultat:</strong> Odgovori mogu biti nejasni, preširoki i neće ispuniti očekivanja korisnika.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Napredne metode promptanja</h2>
+        <ul>
+          <li><strong>Zadavanje uloga</strong>: Definirajte specifičnu ulogu za model kako biste poboljšali fokus i stil odgovora.</li>
+          <li><strong>Primjer:</strong> "Zamisli da si profesor računalnih znanosti. Objasni osnovne koncepte strojnog učenja." </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Napredne metode promptanja</h2>
+        <ul>
+          <li><strong>Kontekstualizacija</strong>: Uključite relevantan kontekst koji će modelu pomoći da pruži precizne odgovore.</li>
+          <li><strong>Primjer:</strong> "Na temelju najnovijih istraživanja u 2023. godini, objasni kako AI može utjecati na obrazovne sustave." </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Napredne metode promptanja</h2>
+        <ul>
+          <li><strong>Specifikacija formata odgovora</strong>: Možete odrediti format u kojem želite da model pruži odgovor (popis, sažetak, dugačak odgovor itd.).</li>
+          <li><strong>Primjer:</strong> "Nabroji 5 ključnih prednosti AI u poslovanju u obliku sažetka sa 3 rečenice." </li>
+        </ul>
+      </section>
+      <section>
+        <h2>LLM-ovi u svakodnevnom radu</h2>
         <ul>
           <li>Automatizacija zadataka</li>
           <li>Korištenje alata: ChatGPT, Copilot, Notion AI</li>
-          <li>Odgovorno korištenje i ograničenja</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Opasnosti LLM-ova</h2>
+        <ul>
+          <li><strong>Halucinacije</strong>: LLM-ovi mogu generirati netočne ili izmišljene informacije koje zvuče uvjerljivo, ali nisu istinite.</li>
+          <li><strong>Pristranost</strong>: Modeli mogu naslijediti pristranosti iz podataka na kojima su trenirani, što može dovesti do nepravednih ili diskriminirajućih odgovora.</li>
+          <li><strong>Manipulacija</strong>: LLM-ovi se mogu koristiti za generiranje lažnih vijesti, propagande ili dezinformacija.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Opasnosti LLM-ova</h2>
+        <ul>
+          <li><strong>Ovisnost o tehnologiji</strong>: Prekomjerno oslanjanje na LLM-ove može smanjiti kritičko razmišljanje i sposobnost donošenja vlastitih odluka.</li>
+          <li><strong>Prepoznavanje konteksta</strong>: LLM-ovi ponekad ne mogu prepoznati nuance ili specifične kontekste, što može dovesti do neadekvatnih odgovora.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Odgovorno korištenje LLM-ova</h2>
+        <ul>
+          <li><strong>Osobni podaci</strong>: Nikada ne unosite osobne podatke u LLM, kao što su osjetljive informacije o korisnicima, financijske ili zdravstvene informacije.</li>
+          <li><strong>Sigurnost podataka</strong>: Provjerite politiku privatnosti i sigurnosti LLM-a prije nego što podijelite bilo kakve podatke.</li>
+          <li><strong>Etika</strong>: Budite odgovorni u korištenju LLM-a za generiranje sadržaja, izbjegavajte širenje dezinformacija ili zloupotrebu generiranih odgovora.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Odgovorno korištenje LLM-ova</h2>
+        <ul>
+          <li><strong>Transparentnost</strong>: Obavijestite korisnike kada koriste AI alate kako bi znali da komuniciraju s automatiziranim sustavom.</li>
+          <li><strong>Regulacije</strong>: Upoznajte se s zakonodavstvom i regulativama koje se odnose na korištenje umjetne inteligencije, poput GDPR-a i drugih zakona o privatnosti podataka.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Resursi potrebni za treniranje LLaMA-4</h2>
+        <ul>
+          <li><strong>GPU sati:</strong> 7,38 milijuna sati korištenja NVIDIA H100-80GB GPU-ova</li>
+          <li><strong>Potrošnja električne energije:</strong> 2.638.000 kWh tijekom treniranja</li>
+          <li><strong>Emisije CO₂:</strong> 1.999 tona CO₂ ekvivalenta (lokacijski izračun); 0 tona CO₂ ekvivalenta (tržišni izračun, zbog korištenja obnovljivih izvora energije)</li>
+        </ul>
+      </section>
+      <section>
+        <img src="img/img_10.png" alt="" style="max-width: 60%; height: auto;">
+      </section>
+
+      <section>
+        <h2>Za one koji žele znati više</h2>
+        <ul>
+          <li><strong><a href="https://bbycroft.net/llm" target="_blank">3D Vizualizacija LLM-a</a></strong></li>
+          <li><strong><a href="https://arxiv.org/abs/1706.03762">Attention is all you need</a></strong> </li>
+          <li><strong><a href="pdf/nn_primjer.pdf" target="_blank">Neuronska mreža na papiru</a></strong></li>
+          <li><strong><a href="pdf/conv_demo.pdf" target="_blank">Konvolucijska mreža na papiru</a></strong></li>
+          <li><strong><a href="pdf/conv_demo.pdf" target="_blank">Povratni modeli na papiru</a></strong></li>
+          <li><strong><a href="https://github.com/matijapavlovic8" target="_blank">Moja istraživanja i projekti</a></strong></li>
         </ul>
       </section>
       <section>
